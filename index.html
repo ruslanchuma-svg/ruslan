@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Современный сайт</title>
+
+<!-- ПРЕМИУМ ШРИФТЫ -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">Ваш Сайт</div>
+    <ul class="nav-links">
+      <li><a href="#home">Главная</a></li>
+      <li><a href="#about">О нас</a></li>
+      <li><a href="#services">Услуги</a></li>
+      <li><a href="#contact">Контакты</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <h1>Добро пожаловать!</h1>
+  <p>Современный шаблон сайта с рабочей формой обратной связи.</p>
+  <a href="#contact" class="btn">Связаться с нами</a>
+</section>
+
+<section id="about" class="hidden">
+  <h2>О нас</h2>
+  <p>Мы проектируем и разрабатываем цифровые решения с акцентом на дизайн, удобство и высокое качество исполнения.</p>
+</section>
+
+<section id="services" class="hidden">
+  <h2>Наши услуги</h2>
+  <div class="service-cards">
+    <div class="card hidden"><h3>Дизайн</h3><p>Красивый и современный дизайн.</p></div>
+    <div class="card hidden"><h3>Разработка</h3><p>Адаптивный и функциональный код.</p></div>
+    <div class="card hidden"><h3>Поддержка</h3><p>Помощь и обновление сайта.</p></div>
+  </div>
+</section>
+
+<section id="contact" class="hidden">
+  <h2>Связаться с нами</h2>
+
+  <form id="contactForm" action="https://formspree.io/f/mvzvrvny" method="POST">
+    <input type="text" name="name" placeholder="Ваше имя" required>
+    <input type="email" name="email" placeholder="Ваш Email" required>
+    <textarea name="message" placeholder="Сообщение" required></textarea>
+    <button type="submit">Отправить</button>
+    <div class="success-message" id="successMessage">Спасибо! Ваше сообщение отправлено.</div>
+  </form>
+
+  <div class="social">
+    <a href="https://wa.me/77075357950" target="_blank">WhatsApp</a>
+    <a href="https://www.instagram.com/r.nk0/" target="_blank">Instagram</a>
+    <a href="https://t.me/ruslaakz" target="_blank">Telegram</a>
+  </div>
+</section>
+
+<footer class="hidden">
+  <p>&copy; 2026 ВашСайт. Все права защищены.</p>
+</footer>
+
+<script src="js/script.js"></script>
+<button id="topBtn" class="top-btn">↑</button>
+</body>
+</html>

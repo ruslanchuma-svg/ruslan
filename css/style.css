@@ -1,0 +1,287 @@
+/* ===== ПРЕМИУМ ШРИФТЫ ===== */
+body {
+  font-family: 'Inter', sans-serif;
+  margin:0;
+  padding:0;
+  scroll-behavior:smooth;
+  background:#ffffff;
+  color:#111;
+}
+
+/* Заголовки */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+h1 { font-size: 52px; }
+h2 { font-size: 36px; margin-bottom: 1rem; }
+
+p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+a { text-decoration:none; color:inherit; }
+
+/* NAV */
+.navbar {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:1rem 2rem;
+  background:#000000e8;
+  color:white;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.nav-links li {
+  display:inline;
+  margin-left:1.5rem;
+}
+
+.nav-links a {
+  color:white;
+  font-weight:500;
+}
+
+/* HERO */
+.hero {
+  height:100vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.89), rgba(0, 0, 0, 0.801)),
+    url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') center/cover no-repeat;
+  color:rgb(255, 255, 255);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.hero .btn {
+  padding:0.8rem 2rem;
+  background:#ffffff;
+  color:rgb(7, 7, 7);
+  border:none;
+  margin-top:1rem;
+  cursor:pointer;
+  border-radius:5px;
+  transition:0.3s;
+}
+
+.hero .btn:hover {
+  background:#e73018;
+}
+
+section {
+  padding:5rem 2rem;
+  text-align:center;
+}
+
+.service-cards {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:1rem;
+}
+
+.card {
+  background:#fff;
+  padding:2rem;
+  border-radius:10px;
+  width:250px;
+  box-shadow:0 4px 12px rgba(43, 42, 42, 0.199);
+  transition:0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow:0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* FORM */
+form {
+  display:flex;
+  flex-direction:column;
+  max-width:400px;
+  margin:auto;
+  gap:1rem;
+  background:#fff;
+  padding:2rem;
+  border-radius:10px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+input, textarea {
+  padding:0.8rem;
+  border-radius:5px;
+  border:1px solid #ccc;
+  transition:0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color:#ff6347;
+  outline:none;
+  box-shadow:0 0 5px rgba(255,99,71,0.5);
+}
+
+button {
+  padding:0.8rem;
+  border:none;
+  background:#333;
+  color:white;
+  border-radius:5px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover {
+  background:#555;
+}
+
+.social {
+  margin-top:1rem;
+}
+
+.social a {
+  margin:0 0.5rem;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.social a:hover {
+  color:#ff6347;
+}
+
+footer {
+  background:#000000;
+  color:white;
+  padding:2rem;
+  margin-top:2rem;
+}
+
+/* АНИМАЦИИ */
+.hidden {
+  opacity:0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+.show {
+  opacity:1;
+  transform: translateY(0);
+}
+
+/* задержка карточек */
+.card:nth-child(1) { transition-delay:0.1s; }
+.card:nth-child(2) { transition-delay:0.2s; }
+.card:nth-child(3) { transition-delay:0.3s; }
+
+@media(max-width:768px){
+  .service-cards {
+    flex-direction:column;
+    align-items:center;
+  }
+}
+/* ===== АДАПТИВ ПОД ТЕЛЕФОН ===== */
+
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .nav-links {
+    padding: 0;
+  }
+
+  .nav-links li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  /* HERO */
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  /* СЕКЦИИ */
+  section {
+    padding: 3rem 1rem;
+  }
+
+  /* КАРТОЧКИ */
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  /* ФОРМА */
+  form {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  input, textarea {
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  /* ЗАГОЛОВКИ */
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}
+/* ===== КНОПКА НАВЕРХ ===== */
+
+.top-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.top-btn:hover {
+  background: #333;
+  transform: translateY(-3px);
+}
+.hero p {
+  color: rgb(243, 243, 243) !important;
+}
